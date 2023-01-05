@@ -1,0 +1,60 @@
+:root{
+    --sidePd : 40px;
+    --wrapW : 1440px;
+    --black00: #000000;
+    --black01: #111111;
+    --black02: #222222;
+    --black03: #333333;
+    --black04: #444444;
+    --black05: #555555;
+    --gray01: #666666;
+    --gray02: #999999;
+    --gray03: #aaaaaa;
+    --radius01 : 20px 20px 20px 20px;
+    --radius02 : 15px 15px 15px 15px;
+    --radius03 : 10px 10px 10px 10px;
+    --radius04 : 5px 5px 5px 5px;
+}
+.sidePadding{padding-left: var(--sidePd);padding-right: var(--sidePd);}
+.basicWrap{width: 100%;max-width:var(--wrapW);margin-left: auto;margin-right: auto;}
+.absCenter{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.radius01{
+    border-radius: var(--radius01);
+    -webkit-border-radius: var(--radius01);
+    -moz-border-radius: var(--radius01);
+}
+.radius02{
+    border-radius: var(--radius02);
+    -webkit-border-radius: var(--radius02);
+    -moz-border-radius: var(--radius02);
+}
+.radius03{
+    border-radius: var(--radius03);
+    -webkit-border-radius: var(--radius03);
+    -moz-border-radius: var(--radius03);
+}
+.radius04{
+    border-radius: var(--radius04);
+    -webkit-border-radius: var(--radius04);
+    -moz-border-radius: var(--radius04);
+}
+::-moz-selection {
+    color: var(--gray03);
+    background: var(--black02);
+}
+  
+::selection {
+  color: var(--gray03);
+  background: var(--black02);
+}
+@media all and (max-width:1024px){
+    :root{
+        --sidePd : 20px;
+    }
+}
+
+@media all and (max-width:480px){
+    :root{
+        --sidePd : 16px;
+    }
+}

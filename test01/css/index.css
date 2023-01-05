@@ -1,0 +1,50 @@
+body{cursor: none;}
+*{margin: 0;padding: 0;box-sizing: border-box;}
+section{height: 100vh;border: 1px solid #000;}
+.section01{position: relative;}
+.s1--text01{position: absolute;transform: translate(-50%,-50%);top: 50%;left: 50%;-webkit-column-width: 100%;font-size: 40px;display: flex;align-items: center;}
+.s1--text01Wrap{opacity: 0;transition-duration: 1s;}
+.s1--text01Wrap.open{opacity: 1;}
+
+.s1--text02Container{position: absolute;bottom: 0;left: 0;width: 100%;overflow: hidden;}
+.s1--text02Wrap{width: 100%;display: flex;}
+.s2--text02{font-size: 10vw;transform: translateX(-100%);}
+
+.topBtn{position: fixed;bottom: var(--sidePd);right: var(--sidePd);z-index: 9999;width: 200px;}
+.topBtn svg{width: 100%;display: block;}
+.topBtn .topBtn--circle{width: 100%;position: relative;}
+.topBtn .topBtn--circle2{width: 70%;position: absolute;opacity: 0.8;}
+
+#s2{height: unset;}
+.s2--wrap{width: 100%;display: flex;height: 100%;}
+.s2--col{width: 50%;position: relative;}
+.s2--col1-sticky{position: absolute;width: 100%;height: 100vh;}
+.s2--col1-sticky p{width: 100%;position: relative;height: 400px;display: flex;align-items: center;text-align: center;justify-content: center;background-color: var(--gray01);color: #fff;font-size: 40px;height: 100%;}
+.s2--col1-sticky-filter{width: 100%;padding-top:100%;position: absolute;top: 0;left: 0;background-color: #fff;  mix-blend-mode: difference;transform: translate(-50%,-50%) scale(0);top: 50%;left: 50%;border-radius: 50%;}
+
+#s3{height: 500vh;width: 100%;}
+.s3--horizon{height: 100vh;border: 1px solid #000;overflow: hidden;position: relative;}
+.s3--horizon-back{position: absolute;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;text-align: center;font-size: 40px;background-color: var(--gray03);}
+.s3--horizonWrap{display: flex;align-items: center;height: 100%;border: 1px solid #000;width: min-content;position: relative;background-color: #fff;}
+.s3--item{width: 80vw;border: 1px dotted #000;height: 100%;display: flex;align-items: center;text-align: center;justify-content: center;font-size: 40px;}
+
+#s4{height: 100vh;}
+.s4--wrap{position: relative;width: 100%;height: 100%;}
+.s4--box{width: 600px;height: 600px;border: 1px solid #000;}
+.s4--circleCont{position: absolute;top: 50%;left: 50%;}
+.s4--circleCont2{position: absolute;top: 50%;left: 50%;}
+.s4--circle{width: 220px;height: 220px;border: 1px solid #000;border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);pointer-events: none;transition-duration: .5s;}
+.s4--circle2{width: 330px;height: 330px;background-color: var(--black03);border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%) scale(0);pointer-events: none;transition-duration: .5s;}
+/* .s4--circle3{width: 230px;height: 230px;background-color: var(--black03);border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%) scale(0);pointer-events: none;transition-duration: .5s;opacity: 0.5;} */
+/* .s4--circle4{width: 350px;height: 350px;border:1px solid var(--black03);border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);pointer-events: none;} */
+.in .s4--circle{transform: translate(-50%,-50%) scale(1.5);}
+.in .s4--circle2{transform: translate(-50%,-50%) scale(1);}
+.in .s4--circle3{transform: translate(-50%,-50%) scale(1) rotate(360deg);}
+
+
+
+
+#s5 circle {fill: black;}
+#s5 svg {overflow: visible;height: 100%;transform: translateZ(0);}
+path {stroke-width: 2;stroke: gray;}
+.gsap-3-logo {width: 20vw;max-width: 150px;position: fixed;bottom: 15px;right: 15px;}
