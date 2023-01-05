@@ -94,17 +94,21 @@ ScrollTrigger.create({
 })
 
 const s4box = document.getElementById("s4box")
+// var s4boxTop = s4box.getBoundingClientRect().top;
+// var s4boxLeft = s4box. getBoundingClientRect().left;
 var s4boxTop = s4box.offsetTop
-var s4boxLeft = s4box.offsetLeft
+var s4boxLeft = s4box. offsetLeft
 var s4boxWidth = s4box.offsetWidth
 var s4boxHeight = s4box.offsetHeight
-console.log(s4boxTop, s4boxLeft, s4boxWidth, s4boxHeight)
 s4box.addEventListener("mouseenter", e => {
     s4box.classList.add("in")
 })
 s4box.addEventListener("mousemove", e => {
-    var x = e.clientX - s4boxLeft
-    var y = e.clientY - s4boxTop
+    var x = e.clientX - s4boxLeft - s4boxWidth/2
+    var y = e.clientY - s4boxTop - s4boxHeight/2
+    s4boxTop = s4box.getBoundingClientRect().top;
+    s4boxLeft = s4box. getBoundingClientRect().left;
+    console.log(y,"...",s4boxTop)
     TweenLite.to(".s4--circleCont",1,{
         css:{transform:`matrix(1,0,0,1,${x/10},${y/10})`}
     })
@@ -121,3 +125,24 @@ s4box.addEventListener("mouseleave", e => {
         css:{transform:`matrix(1,0,0,1,0,0)`}
     })
 })
+gsap.to("#s5rect", {
+    scrollTrigger:{
+        scroller:scroller,
+        trigger:"#s5",
+        start:"10% 50%",
+        end:"50% 50%",
+        scrub: 1,
+    },
+    // duration: 5,
+    // repeat: 12,
+    // repeatDelay: 1,
+    // yoyo: true,
+    ease: "power1.inOut",
+    immediateRender: true,
+    motionPath:{
+      path: "#s5path",
+      align: "#s5path",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5]
+    }
+});
